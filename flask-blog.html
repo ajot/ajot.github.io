@@ -1,0 +1,48 @@
+
+    <h1>About Flask Blog</h1>
+    <p><p>Flaskblog on GitHub: <a href="https://github.com/insomnux/flaskblog">github.com/insomnux/flaskblog</a>.</p>
+<p>Demo on <a href="http://insomnux.pythonanywhere.com/">insomnux.pythonanywhere.com/</a></p>
+<h2>Features:</h2>
+<p>Posts are added in <code>markdown</code> format in the <code>pages</code> directory. Posts must have <a href="http://www.yaml.org/">YAML metadata</a>, followed by a blank line and then the page or post body.</p>
+<p>Example:</p>
+<p>```
+title: My post
+date: 2018-12-12
+descr: A new awesome post I wrote
+tags: [post, new, awesome]
+img: cutecat.jpg
+imgalt: Photo of my cute cat</p>
+<h1>Lorem Ipsum</h1>
+<p>```</p>
+<p>Metadata tags used:</p>
+<p>tag   | used for                                         <br />
+--------|--------------------------------------------------------------
+ title  | post or page title                                         <br />
+ date   | publication date - mandatory for posts                     <br />
+ descr  | page or post description                                   <br />
+ tags   | tags for the post                                          <br />
+ img    | filename of a picture uploaded in <code>static/pictures</code>        <br />
+ imgalt | alt property for picture (required)                        <br />
+ static | <code>static: True</code> signifies that an article is a post, not page </p>
+<ul>
+<li>Displays post list by post date in <code>$HOSTNAME/articles/$POSTNAME</code> - ex: <a href="http://insomnux.pythonanywhere.com/articles/dolor-sin-amet/">insomnux.pythonanywhere.com/articles/dolor-sin-amet/</a></li>
+<li>Static pages (yaml matter: <code>static: True</code>) in <code>$HOSTNAME/$PAGENAME</code> - ex: <a href="http://insomnux.pythonanywhere.com/about/">insomnux.pythonanywhere.com/about</a></li>
+<li>Tags support</li>
+<li>Contact form with <a href="https://flask-wtf.readthedocs.io/en/stable/">Flask-WTF</a> and <a href="https://pythonhosted.org/Flask-Mail/">Flask-Mail</a></li>
+<li>Code highlighting with <a href="http://pygments.org/">Pygments</a></li>
+</ul>
+<h2>Credits:</h2>
+<ul>
+<li>Tutorials: <ul>
+<li><a href="https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/">Dead easy yet powerful static website generator with Flask</a></li>
+<li><a href="http://ju.outofmemory.cn/entry/152919">Using Flask to build static blog builder</a></li>
+<li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">The Flask Mega-Tutorial</a></li>
+</ul>
+</li>
+<li><code>paginate.py</code>: <a href="http://ju.outofmemory.cn/entry/152919">Using Flask to build static blog builder</a></li>
+<li>Logo: <a href="https://github.com/pigment/fake-logos">pigment/fake-logos</a></li>
+<li>CSS framework: <a href="https://milligram.io/">Milligram - A minimalist CSS framework</a></li>
+</ul><p>
+    <strong></strong> 2018-12-12</span>
+
+<h1 id="using-flaskfrozen-to-generate-static-html-files">Using flask_frozen to generate static html files</h1>
