@@ -1,6 +1,11 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+  }
+
 /* Home Page */
 .blog-masthead{
-    background-color:black;
+    background-color:var(--blue);
 }
 
 a.site-nav-logo{
@@ -13,14 +18,18 @@ a.site-nav-logo{
     height: 75px;
 }
 
+.blog-sidebar{
+    padding-top: 50px;
+}
 /* Blog Post Page */
+.blog-post{
+    margin-bottom:0;
+}
+
 .blog-post img{
     max-width: 100%;
 }
 
-.blog-title, .blog-description{
-    display: none;
-}
 .blog-post h3 {
     margin: 0.5em 0 0.2em;
     line-height: 1.3em;
@@ -28,16 +37,21 @@ a.site-nav-logo{
 }
 
 .blog-post a {
-    text-decoration: underline;
     font-size: 1.6rem;
+    color:blue;
 }
 
 .blog-post p {
     font-size: 1.6rem;
 }
-
-h2.blog-post-title{
+h1.page-title{
     font-size: 4rem;
+    margin-top: 20px;
+}
+
+
+h2.blog-post-title a{
+    font-size: 3rem;
     margin-top: 0;
 }
 
@@ -77,7 +91,7 @@ p.author a{
     width: 100%;
     height: 100%;
     background: #e3e9ed;
-    border-radius: 100%;
+    border-radius: 5%;
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -133,7 +147,8 @@ hr {
     position: relative;
     display: block;
     width: 100%;
-    margin: 2.5em 0 3.5em;
+    /* margin: 2.5em 0 3.5em; */
+    margin:0;
     padding: 0;
     height: 1px;
     border: 0;
@@ -244,8 +259,14 @@ blockquote cite a {
     font-weight: normal;
 }
 
+.blog-description a {
+    color: var(--blue);
+    text-decoration: none;
+}
 a {
-    color: color(var(--blue) l(-5%));
+    /* color: color(var(--blue) l(-5%));
+     */
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -309,3 +330,35 @@ h6 {
     font-size: 1.4rem;
     font-weight: 500;
 }
+.center{
+    text-align: center;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px; /* Set the fixed height of the footer here */
+    line-height: 30px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+  /* .container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  } */

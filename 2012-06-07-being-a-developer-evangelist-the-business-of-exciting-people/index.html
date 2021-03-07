@@ -15,37 +15,44 @@
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/blog/blog.css">
-    
+    <!-- <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/blog/blog.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "/static/styles/blog.css">
     <!-- Custom styles for this template -->
     <link rel= "stylesheet" type= "text/css" href= "/static/styles/style.css">
 
   </head>
 
   <body>
-
     <div class="blog-masthead">
       <div class="container">
-        <nav class="blog-nav">
+        <nav class="col-sm-offset-1 col-sm-10 blog-nav">
           <a class="site-nav-logo" href="/">AMIT JOTWANI</a>
-          <a class="blog-nav-item active" href="/">Home</a>
+          
+            <!-- <p>Path = 2012-06-07-being-a-developer-evangelist-the-business-of-exciting-people</p>
+            <p>Item = essays</p> -->
+
+             
+               <a class="blog-nav-item" href="/essays">Essays</a>
+            
+           
+            <!-- <p>Path = 2012-06-07-being-a-developer-evangelist-the-business-of-exciting-people</p>
+            <p>Item = alexa</p> -->
+
+             
+               <a class="blog-nav-item" href="/alexa">Alexa</a>
+            
+            
           
           
-          <a class="blog-nav-item" href="/alexa">Alexa Blog Posts</a>
         </nav>
       </div>
     </div>
 
     <div class="container">
 
-      <div class="blog-header">
-        <h1 class="blog-title">Amit Jotwani</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
-      </div>
-
       <div class="row">
 
-        <div class="col-sm-8 blog-main">
+        <div class="col-sm-offset-1 col-sm-10 blog-main">
             
 <div class="blog-post">
     <h2 class="blog-post-title">Being a Developer Evangelist &amp;#8211; The business of exciting people</h2>
@@ -176,33 +183,13 @@
   </div><!-- /.blog-post -->
 
         </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <div class="sidebar-author-avatar-container">
-              <a href="#" class="author-avatar"><img class="author-profile-image" src="https://raw.githubusercontent.com/ajot/me/master/assets/amit-2019.jpg" alt="Amit Jotwani"></a>      
-            </div>
-      
-            <p>Hello! My name is Amit, and I am Alexa Evangelist at Amazon. By day you can find me at my desk cooking up beautiful code. By night, when’s I'm not talking to Alexa or catching up on the re-runs of Seinfeld, I sometimes disappoint people with my jokes at the local standup comedy club in New York.</p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="https://twitter.com/amit">Twitter</a></li>
-              <li><a href="https://github.com/ajot">GitHub</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-
       </div><!-- /.row -->
 
     </div><!-- /.container -->
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
+    <footer class="footer blog-footer">
+      <p>Fresh brewed with <a href="https://flask.palletsprojects.com/">Flask</a></p>
     </footer>
+    
   </body>
 </html>
