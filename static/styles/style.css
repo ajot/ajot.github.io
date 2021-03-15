@@ -38,7 +38,7 @@ a.site-nav-logo{
 
 .blog-post a {
     font-size: 1.6rem;
-    color:blue;
+    color: var(--blue);
 }
 
 .blog-post p {
