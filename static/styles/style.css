@@ -1,50 +1,22 @@
 :root {
     --blue: #1e90ff;
     --white: #ffffff;
+    --red:red;
+    --gray:#eaeaea;
+    --yellow:yellow;
   }
 
-/* Notes */
-  body {
-    background-color: blue
-}
-
-.notes {
-    border-top-right-radius: 42px
-}
-
-.dot {
-    height: 6px;
-    width: 6px;
-    margin-left: 8px;
-    margin-right: 3px;
-    margin-top: 2px;
-    background-color: rgb(91, 92, 91);
-    border-radius: 50%;
-    display: inline-block
-}
-
-.review-text {
-    background: #e3e1eb
-}
 
 .info {
-    color: #8c8b9a
+    color:#000;
+    border-radius: 10%;
+    /* background-color: #8c8b9a; */
+    background-color:var(--yellow);
+    padding: 3px;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
 }
 
-.dot-red {
-    background-color: red !important;
-    height: 6px;
-    width: 6px;
-    margin-left: 8px;
-    margin-right: 3px;
-    margin-top: 2px;
-    border-radius: 50%;
-    display: inline-block
-}
-
-.overview {
-    color: red
-}
 
 
 /* Home Page */
