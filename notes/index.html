@@ -66,7 +66,7 @@
       <h2 class="blog-post-title"><a href="/spotify">Get Spotify Track information (Apple Script + Text Expander)</a></h2>
         <!-- <p>Wouldn&#39;t it be cool, if there was a way to get that track information with just a keyboard shortcut, and paste the track details here in this note as I type?<p> -->
         <p><p>Here's the Apple script that will get the track information from Spotify for the current track. Once you have this, you just need a way to print the result somewhere. I use the Text Expander app on the Mac to insert text snippets with simple keyboard shortcuts. </p>
-<p>```
+<pre><code>
 if application "Spotify" is running then
     tell application "Spotify"
         if (get player state) is playing then
@@ -74,23 +74,25 @@ if application "Spotify" is running then
             set currentTrack to current track
             set songName to (get name of currentTrack)
             set songArtist to (get artist of currentTrack)
-            set returnString to "\"" &amp; songName &amp; "\"" &amp; " by " &amp; "\"" &amp; songArtist &amp; "\""
-            return returnString</p>
-<pre><code>    end if
-    return (get player state)
-end tell
-</code></pre>
-<p>else
+            set returnString to "\"" & songName & "\"" & " by " & "\"" & songArtist & "\""
+            return returnString
+
+        end if
+        return (get player state)
+    end tell
+else
     return "Spotify is not running"
 end if
-```</p>
-<h3>Add the Scriot to Text Expander</h3>
+
+</code></pre>
+<h3>Add the Script to Text Expander</h3>
 <p>Then you just add that to TextExpander. </p>
 <ol>
 <li>Set "Content" to "AppleScript", and paste the script above. </li>
 <li>Assign a keyboard shortcut you would like. I used "song;" (with a semi-colon). </li>
+<li>That's it. Now, when you type that combination anywhere on your Mac, it will replace that with the name of the song currently playing.</li>
 </ol>
-<p>That's it. Now, when you type that combination anywhere on your Mac, it will replace that with the name of the song currently playing.</p><p></p>
+<p><img alt="" src="/static/images/spotify-text-expander.png" /> </p><p></p>
       </div><!-- /.blog-post -->
     
     <div class="blog-post posts">
