@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="canonical" href="https://ajot.me">
+
+  <title>Get Spotify Track information (Apple Script + Text Expander) - Amit Jotwani</title>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/blog/blog.css"> -->
+  <link rel="stylesheet" type="text/css" href="/static/styles/blog.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+  
+  <script async defer data-domain="ajot.me" src="https://plausible.io/js/plausible.js"></script>
+</head>
+
+<body>
+  <div class="blog-masthead">
+    <div class="container">
+      <nav class="col-sm-offset-1 col-sm-10 blog-nav">
+        <a class="site-nav-logo" href="/">AMIT JOTWANI</a>
+        
+        
+		<!-- inactive menu item -->
+        <a class="blog-nav-item" href="/essays">Essays</a>
+        
+        
+        
+		<!-- inactive menu item -->
+        <a class="blog-nav-item" href="/tutorials">Tutorials</a>
+        
+        
+        
+		<!-- active menu item - one of the main pages, or posts belonging to those pages -->
+        <a class="blog-nav-item active" href="/notes">Notes</a>
+        
+        
+
+        
+        
+      </nav>
+    </div>
+  </div>
+
+  <div id="main" class="container">
+
+    <div class="row">
+
+      <div class="col-sm-offset-1 col-sm-10 blog-main">
+        
+<div class="blog-post">
+    <h1 class="blog-post-title center">Get Spotify Track information (Apple Script + Text Expander)</h1>
+    <p class="blog-post-meta center">Filed in <a href="/notes">notes</a></p>
+    
+  
+  
+  
+    <p><p>Here's the Apple script that will get the track information from Spotify for the current track. Once you have this, you just need a way to print the result somewhere. I use the Text Expander app on the Mac to insert text snippets with simple keyboard shortcuts. </p>
+<p>```
+if application "Spotify" is running then
+    tell application "Spotify"
+        if (get player state) is playing then
+            set appProperties to properties
+            set currentTrack to current track
+            set songName to (get name of currentTrack)
+            set songArtist to (get artist of currentTrack)
+            set returnString to "\"" &amp; songName &amp; "\"" &amp; " by " &amp; "\"" &amp; songArtist &amp; "\""
+            return returnString</p>
+<pre><code>    end if
+    return (get player state)
+end tell
+</code></pre>
+<p>else
+    return "Spotify is not running"
+end if
+```</p>
+<h3>Add the Scriot to Text Expander</h3>
+<p>Then you just add that to TextExpander. </p>
+<ol>
+<li>Set "Content" to "AppleScript", and paste the script above. </li>
+<li>Assign a keyboard shortcut you would like. I used "song;" (with a semi-colon). </li>
+</ol>
+<p>That's it. Now, when you type that combination anywhere on your Mac, it will replace that with the name of the song currently playing.</p><p>
+  </div><!-- /.blog-post -->
+
+      </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+
+  </div><!-- /.container -->
+
+  <footer class="footer blog-footer">
+    <p><a href="https://ajot.me">ajot.me</a> is 100% fresh HTML. Brewed with <a
+        href="https://flask.palletsprojects.com/">Flask</a>. Served with <a
+        href="https://pythonhosted.org/Frozen-Flask/">Frozen-Flask</a>. Hosted on <a
+        href="https://pages.github.com">GitHub</a>.</a> | <a
+        href="https://github.com/ajot/ajot.github.io/commits/main">Change log</a></p>
+  </footer>
+
+</body>
+
+</html>
